@@ -34,6 +34,7 @@ public class WebSocketEventListener {
             log.info("User disconnected: {}", username);
 
            var chatMessage=ChatMessage.builder()
+                           .content("User disconnected: ")
                            .type(MessageType.LEAVE)
                            .sender(username)
                            .build();
